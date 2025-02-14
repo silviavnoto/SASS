@@ -1,0 +1,64 @@
+/* Base CSS */
+@use 'variables' as vars;
+
+body {
+    font-family: vars.$font-family-base;
+    font-size: vars.$font-size-base;
+    color: vars.$primary-color;
+    line-height: 1.5;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.2;
+    color: vars.$secondary-color;
+}
+
+p {
+    margin: vars.$spacing-unit 0;
+}
+
+a {
+    color: vars.$primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul,
+ol {
+    padding-left: vars.$spacing-unit * 2;
+    margin: vars.$spacing-unit 0;
+}
+
+li {
+    margin-bottom: vars.$spacing-unit / 2;
+}
+
+/* Paddings & margins */
+$sizes: (
+    xs: 4px,
+    15 sm: 8px,
+    md: 16px,
+    lg: 24px,
+    xl: 32px
+);
+
+@each $size, $value in $sizes {
+    .m-#{$size} {
+        margin: $value;
+    }
+
+    .p-#{$size} {
+        padding: $value;
+    }
+}

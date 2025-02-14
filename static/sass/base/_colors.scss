@@ -1,0 +1,26 @@
+@use 'variables' as vars;
+
+/* Generar tonos claros y oscuros */
+.text-primary {
+    color: vars.$primary-color;
+}
+
+.text-primary-light {
+    color: lighten(vars.$primary-color, 20%);
+}
+
+.text-primary-dark {
+    color: darken(vars.$primary-color, 20%);
+}
+
+.bg-primary {
+    background-color: vars.$primary-color;
+}
+
+.bg-primary-light {
+    background-color: lighten(vars.$primary-color, 20%);
+}
+
+.bg-primary-dark {
+    background-color: darken(vars.$primary-color, 20%);
+}

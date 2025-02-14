@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset CSS */
 * {
   margin: 0;
@@ -18,10 +19,134 @@ body {
 }
 
 /* Variables globales */
+/* Base CSS */
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: #3498db;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #2ecc71;
+}
+
+p {
+  margin: 8px 0;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  padding-left: 16px;
+  margin: 8px 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* Paddings & margins */
+.m-xs {
+  margin: 4px;
+}
+
+.p-xs {
+  padding: 4px;
+}
+
+.m-15 sm {
+  margin: 8px;
+}
+
+.p-15 sm {
+  padding: 8px;
+}
+
+.m-md {
+  margin: 16px;
+}
+
+.p-md {
+  padding: 16px;
+}
+
+.m-lg {
+  margin: 24px;
+}
+
+.p-lg {
+  padding: 24px;
+}
+
+.m-xl {
+  margin: 32px;
+}
+
+.p-xl {
+  padding: 32px;
+}
+
+/* Tipografía */
+.fs-1 {
+  font-size: 0.875rem;
+}
+
+.fs-2 {
+  font-size: 1rem;
+}
+
+.fs-3 {
+  font-size: 1.25rem;
+}
+
+.fs-4 {
+  font-size: 1.5rem;
+}
+
+.fs-5 {
+  font-size: 2rem;
+}
+
+/* Generar tonos claros y oscuros */
+.text-primary {
+  color: #3498db;
+}
+
+.text-primary-light {
+  color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
+}
+
+.text-primary-dark {
+  color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
+}
+
+.bg-primary {
+  background-color: #3498db;
+}
+
+.bg-primary-light {
+  background-color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
+}
+
+.bg-primary-dark {
+  background-color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+/* Tipografía */
+$font-sizes: 0.875rem, 1rem, 1.25rem, 1.5rem, 2rem;
+
+@each $size in $font-sizes {
+    $index: index($font-sizes, $size);
+
+    .fs-#{$index} {
+        font-size: $size;
+    }
+}
