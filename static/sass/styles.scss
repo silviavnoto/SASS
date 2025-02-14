@@ -1,1 +1,8 @@
-@use 'base/reset'
+@use 'base/reset';
+@use 'base/variables' as vars;
+
+body {
+    font-family: vars.$font-family-base;
+    font-size: vars.$font-size-base;
+    color: vars.$primary-color;
+}
