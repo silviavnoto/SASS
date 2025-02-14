@@ -1,152 +1,22 @@
-@charset "UTF-8";
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Missing argument $number2.
+ *   ,--> static\sass\base\_base.scss
+ * 45|     margin-bottom: math.div(vars.$spacing-unit / 2);
+ *   |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *   '
+ *   ,--> sass:math
+ * 1 | @function div($number1, $number2) {
+ *   |           ======================= declaration
+ *   '
+ *   static\sass\base\_base.scss 45:20  @use
+ *   static\sass\styles.scss 3:1        root stylesheet */
 
-html {
-  font-size: 16px;
-  line-height: 1.5;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Missing argument $number2.\a   \250c \2500 \2500 > static\\sass\\base\\_base.scss\a 45\2502      margin-bottom: math.div(vars.$spacing-unit / 2);\d\a   \2502                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > sass:math\a 1 \2502  @function div($number1, $number2) {\a   \2502            \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   static\\sass\\base\\_base.scss 45:20  @use\a   static\\sass\\styles.scss 3:1        root stylesheet";
 }
-
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #fff;
-  color: #000;
-}
-
-/* Variables globales */
-/* Base CSS */
-body {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  color: #3498db;
-  line-height: 1.5;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: bold;
-  line-height: 1.2;
-  color: #2ecc71;
-}
-
-p {
-  margin: 8px 0;
-}
-
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-ul,
-ol {
-  padding-left: 16px;
-  margin: 8px 0;
-}
-
-li {
-  margin-bottom: 4px;
-}
-
-/* Paddings & margins */
-.m-xs {
-  margin: 4px;
-}
-
-.p-xs {
-  padding: 4px;
-}
-
-.m-15 sm {
-  margin: 8px;
-}
-
-.p-15 sm {
-  padding: 8px;
-}
-
-.m-md {
-  margin: 16px;
-}
-
-.p-md {
-  padding: 16px;
-}
-
-.m-lg {
-  margin: 24px;
-}
-
-.p-lg {
-  padding: 24px;
-}
-
-.m-xl {
-  margin: 32px;
-}
-
-.p-xl {
-  padding: 32px;
-}
-
-/* Tipografía */
-.fs-1 {
-  font-size: 0.875rem;
-}
-
-.fs-2 {
-  font-size: 1rem;
-}
-
-.fs-3 {
-  font-size: 1.25rem;
-}
-
-.fs-4 {
-  font-size: 1.5rem;
-}
-
-.fs-5 {
-  font-size: 2rem;
-}
-
-/* Generar tonos claros y oscuros */
-.text-primary {
-  color: #3498db;
-}
-
-.text-primary-light {
-  color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
-}
-
-.text-primary-dark {
-  color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
-}
-
-.bg-primary {
-  background-color: #3498db;
-}
-
-.bg-primary-light {
-  background-color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
-}
-
-.bg-primary-dark {
-  background-color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
-}
-
-/*# sourceMappingURL=styles.css.map */

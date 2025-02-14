@@ -5,3 +5,13 @@ $error-color: #e74c3c;
 $font-family-base: 'Arial', sans-serif;
 $font-size-base: 16px;
 $spacing-unit: 8px;
+
+$grid-columns: 12;
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+

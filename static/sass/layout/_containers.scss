@@ -1,0 +1,39 @@
+/* Containers */
+@use '../base/variables' as vars;
+
+%container-base {
+    width: 100%;
+    padding-inline: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%container-base {
+    @extend %container-base;
+    max-width: calc(100% - 15px);
+}
+
+@mixin container-media($size) {
+    @media (width >= $size) {
+        max-width: $size;
+    }
+}
+
+container {
+    @extend %container-base-extra;
+
+    @each $breakpoint, $size in $breakpoints {
+        @include container-media($size);
+    }
+}
+
+container-fluid {
+    @extend %container-base-extra;
+}
+
+@each $breakpoint, $size in $breakpoints {
+    .container-#{$breakpoint} {
+        @extend %container-base-extra;
+        @include container-media($size);       
+    }
+}
