@@ -1,0 +1,33 @@
+/* Grid */
+@use 'sass:math';
+@use '../base/variables' as vars;
+
+.row {
+    --gutter-x: 8px;
+    --gutter-y: 8px;
+    display: flex;
+
+    // Hack para el espaciado vertical
+    &+.row {
+        margin-top: var(--gutter-y);
+    }
+}
+
+
+.col {
+    flex: 1 0 0%;
+    padding-inline: calc(var(--gutter-x)/2);
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    padding-inline: calc(var(--gutter-x)/2);
+}
+
+@for $i from 1 through vars.$grid-columns {
+    .col-#{$i} {
+    width: math.div(100%, vars.$grid-columns) * $i;
+    padding-inline: calc(var(--gutter-x)/2);
+    }
+    }    

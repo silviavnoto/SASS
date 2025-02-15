@@ -1,5 +1,7 @@
 @use 'sass:color';
 @use 'variables' as vars;
+//@use 'base/variables' as vars;
+//@use "base/vars" as vars;
 
 /* Generar tonos claros y oscuros */
 .text-primary {
@@ -7,11 +9,11 @@
 }
 
 .text-primary-light {
-    color: color.adjust(vars.$primary-color, $lightness 20%);
+    color: color.adjust(vars.$primary-color, $lightness: 20%);
 }
 
 .text-primary-dark {
-    color: color.adjust(vars.$primary-color, $lightness -20%);
+    color: color.adjust(vars.$primary-color, $lightness: -20%);
 }
 
 .bg-primary {
@@ -19,9 +21,9 @@
 }
 
 .bg-primary-light {
-    background-color: color.adjust(vars.$primary-color, $lightness 20%);
+    background-color: color.adjust(vars.$primary-color, $lightness: 20%);
 }
 
 .bg-primary-dark {
-    background-color: color.adjust(vars.$primary-color, $lightness -20%);
+    background-color: color.adjust(vars.$primary-color, $lightness: -20%);
 }

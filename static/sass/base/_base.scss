@@ -1,5 +1,5 @@
 /* Base CSS */
-@use 'sass:math';
+@use "sass:math";
 @use 'variables' as vars;
 
 body {
@@ -42,13 +42,13 @@ ol {
 }
 
 li {
-    margin-bottom: math.div(vars.$spacing-unit / 2);
+    margin-bottom: math.div(vars.$spacing-unit, 2);
 }
 
 /* Paddings & margins */
 $sizes: (
     xs: 4px,
-    15 sm: 8px,
+    sm: 8px,
     md: 16px,
     lg: 24px,
     xl: 32px

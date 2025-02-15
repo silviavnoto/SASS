@@ -8,7 +8,7 @@
     margin-right: auto;
 }
 
-%container-base {
+%container-base-extra {
     @extend %container-base;
     max-width: calc(100% - 15px);
 }
@@ -22,16 +22,17 @@
 container {
     @extend %container-base-extra;
 
-    @each $breakpoint, $size in $breakpoints {
+    @each $breakpoint, $size in vars.$breakpoints {
         @include container-media($size);
     }
 }
+
 
 container-fluid {
     @extend %container-base-extra;
 }
 
-@each $breakpoint, $size in $breakpoints {
+@each $breakpoint, $size in vars.$breakpoints {
     .container-#{$breakpoint} {
         @extend %container-base-extra;
         @include container-media($size);       
