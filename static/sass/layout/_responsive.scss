@@ -1,0 +1,61 @@
+@use '../base/variables' as vars;
+
+// Solo generará clases responsive si la variable está en `true`
+@if vars.$generate-responsive-classes {
+
+    // Tamaños de fuente
+    $font-sizes: (
+        1: 0.875rem,  // 14px
+        2: 1rem,      // 16px
+        3: 1.25rem,   // 20px
+        4: 1.5rem,    // 24px
+        5: 2rem       // 32px
+    );
+
+    // Número total de columnas
+    $total-columns: 12;
+
+    // Tamaños de gutter
+    $gutters: (
+        0: 0px,
+        1: 8px,
+        2: 16px,
+        3: 32px,
+        4: 64px,
+        5: 128px
+    );
+
+    // Generar clases responsivas de tipografía (.fs-{breakpoint}-{number})
+    @each $breakpoint, $size in vars.$breakpoints {
+        @each $num, $font-size in $font-sizes {
+            @media (min-width: #{$size}) {
+                .fs-#{$breakpoint}-#{$num} {
+                    font-size: $font-size !important;
+                }
+            }
+        }
+    }
+
+    // Generar clases responsivas de columnas (.col-{breakpoint}-{number})
+    @each $breakpoint, $size in vars.$breakpoints {
+        @for $i from 1 through $total-columns {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 calc(100% / $total-columns * $i);
+                max-width: calc(100% / $total-columns * $i);
+            }
+        }
+    }
+
+    // Generar clases responsivas de gutters (.gx-{breakpoint}-{number} y .gy-{breakpoint}-{number})
+    @each $breakpoint, $size in vars.$breakpoints {
+        @each $num, $gutter-size in $gutters {
+            .gx-#{$breakpoint}-#{$num} {
+                --gutter-x: #{$gutter-size};
+            }
+
+            .gy-#{$breakpoint}-#{$num} {
+                --gutter-y: #{$gutter-size};
+            }
+        }
+    }
+}
