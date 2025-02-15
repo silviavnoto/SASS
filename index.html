@@ -1,39 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framework SASS</title>
+    <title>Tipografía Responsive</title>
 
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css"> <!-- Asegúrate de que SCSS se compila bien -->
+    <style>
+        /* Solo para visualización */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .example {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <h1 class="fs-sm-1 fs-md-2 fs-lg-3 fs-xl-4">Título Responsive</h1>
+
+    <p class="fs-sm-2 fs-md-3 fs-lg-4 fs-xl-5">
+        Este párrafo cambia de tamaño según el ancho de la pantalla.
+    </p>
+
     <div class="container-fluid debug-border">
         <div class="row">
             <div class="col-3">
-                <div class="item">.col-3</div>
+                <div class="item fs-sm-1 fs-md-2 fs-lg-3">.col-3</div>
             </div>
             <div class="col-7">
-                <div class="item">.col-7</div>
+                <div class="item fs-sm-2 fs-md-3 fs-lg-4">.col-7</div>
             </div>
             <div class="col-2">
-                <div class="item">.col-2</div>
+                <div class="item fs-sm-3 fs-md-4 fs-lg-5">.col-2</div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <div class="item">.col</div>
+                <div class="item fs-sm-1 fs-md-2 fs-lg-3">.col</div>
             </div>
             <div class="col-auto">
-                <div class="item">.col-auto</div>
+                <div class="item fs-sm-2 fs-md-3 fs-lg-4">.col-auto</div>
             </div>
             <div class="col-6">
-                <div class="item">.col-6</div>
+                <div class="item fs-sm-3 fs-md-4 fs-lg-5">.col-6</div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
