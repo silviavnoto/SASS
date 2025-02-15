@@ -1,0 +1,15 @@
+@use '../base/variables' as vars;
+
+// Número total de columnas en el grid
+$total-columns: 12;
+
+// Generar clases responsivas de columnas
+@each $breakpoint, $size in vars.$breakpoints {
+    @for $i from 1 through $total-columns {
+        .col-#{$breakpoint}-#{$i} {
+            width: calc(100% / $total-columns * $i); // Asignar ancho correcto
+            flex: 0 0 calc(100% / $total-columns * $i);
+            max-width: calc(100% / $total-columns * $i);
+        }
+    }
+}
