@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipografía Responsive</title>
+    <title>Tipografía Responsive y Gutters</title>
 
-    <link rel="stylesheet" href="static/css/styles.css"> <!-- Asegúrate de que SCSS se compila bien -->
+    <link rel="stylesheet" href="static/css/styles.css"> <!-- Asegúrate de compilar SCSS -->
     <style>
         /* Solo para visualización */
         body {
@@ -21,18 +21,25 @@
             display: inline-block;
             border-radius: 5px;
         }
+        /* Aplicar los gutters con CSS variables */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--gutter-y) var(--gutter-x);
+        }
+        .col {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+        }
     </style>
 </head>
 
 <body>
-
-    <h1 class="fs-sm-1 fs-md-2 fs-lg-3 fs-xl-4">Título Responsive</h1>
-
-    <p class="fs-sm-2 fs-md-3 fs-lg-4 fs-xl-5">
-        Este párrafo cambia de tamaño según el ancho de la pantalla.
-    </p>
-
-    <div class="container-fluid debug-border">
+    <!-- Primera sección con gutters gx-3 gy-2 -->
+    <div class="container-fluid debug-border gx-3 gy-2">
         <div class="row">
             <div class="col-3">
                 <div class="item fs-sm-1 fs-md-2 fs-lg-3">.col-3</div>
@@ -44,6 +51,10 @@
                 <div class="item fs-sm-3 fs-md-4 fs-lg-5">.col-2</div>
             </div>
         </div>
+    </div>
+
+    <!-- Segunda sección con gutters más grandes gx-5 gy-4 -->
+    <div class="container-fluid debug-border gx-5 gy-4">
         <div class="row">
             <div class="col">
                 <div class="item fs-sm-1 fs-md-2 fs-lg-3">.col</div>

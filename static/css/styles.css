@@ -407,5 +407,52 @@ li {
     font-size: 2.5rem !important;
   }
 }
+.gx-0 {
+  --gutter-x: 0px;
+}
+
+.gy-0 {
+  --gutter-y: 0px;
+}
+
+.gx-1 {
+  --gutter-x: 8px;
+}
+
+.gy-1 {
+  --gutter-y: 8px;
+}
+
+.gx-2 {
+  --gutter-x: 16px;
+}
+
+.gy-2 {
+  --gutter-y: 16px;
+}
+
+.gx-3 {
+  --gutter-x: 32px;
+}
+
+.gy-3 {
+  --gutter-y: 32px;
+}
+
+.gx-4 {
+  --gutter-x: 64px;
+}
+
+.gy-4 {
+  --gutter-y: 64px;
+}
+
+.gx-5 {
+  --gutter-x: 128px;
+}
+
+.gy-5 {
+  --gutter-y: 128px;
+}
 
 /*# sourceMappingURL=styles.css.map */

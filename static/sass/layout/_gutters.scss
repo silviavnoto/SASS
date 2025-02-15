@@ -1,0 +1,22 @@
+@use '../base/variables' as vars; // Importar variables si es necesario
+
+// Definir tamaños de gutter
+$gutters: (
+    0: 0px,
+    1: 8px,
+    2: 16px,
+    3: 32px,
+    4: 64px,
+    5: 128px
+);
+
+// Generar clases gx-{number} y gy-{number}
+@each $num, $size in $gutters {
+    .gx-#{$num} {
+        --gutter-x: #{$size};
+    }
+
+    .gy-#{$num} {
+        --gutter-y: #{$size};
+    }
+}
